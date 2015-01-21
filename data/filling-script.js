@@ -1,20 +1,21 @@
-var user_fname = "Rick"
+self.port.on("sign", function(fname, lname, email, ccode, address, pcode, message, public, share){
+var user_fname = fname
 var form_fname = document.getElementsByName("first_name")[0]
-var user_lname = "McFarley"
+var user_lname = lname
 var form_lname = document.getElementsByName("last_name")[0]
-var user_email = "rickmcfarley@gmail.com"
+var user_email = email
 var form_email = document.getElementsByName("email")[0]
-var user_ccode = "US"
+var user_ccode = ccode
 var form_ccode = document.getElementsByName("country_code")[0]
-var user_address = "50 Lang Pond rd"
+var user_address = address
 var form_address = document.getElementsByName("address")[0]
-var user_pcode = "03894"
+var user_pcode = pcode
 var form_pcode = document.getElementsByName("postal_code")[0]
-var user_message = ""
+var user_message = message
 var form_message = document.getElementsByName("message")[0]
-var user_public = false
+var user_public = public
 var form_public = document.getElementById("public")
-var user_share = false
+var user_share = share
 var form_share = document.getElementById("share_info")
 
 
@@ -45,3 +46,4 @@ if (form_public != null) {
 if (form_share != null) {
     form_share.checked = user_share;
 }
+});
