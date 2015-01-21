@@ -5,5 +5,60 @@
   "description": "A simple petition signer for change.org",
   "author": "Rick McFarley",
   "license": "GPLv3",
-  "version": "0.9.1"
+  "version": "0.9.1",
+
+  "preferences": [{
+    "name": "fname",
+    "title": "First Name",
+    "type": "string",
+    "value": "Rick"
+  },
+  {
+    "name": "lname",
+    "title": "Last Name",
+    "type": "string",
+    "value": "Mcfarley"
+  },
+  {
+    "name": "email",
+    "title": "Email",
+    "type": "string",
+    "value": "rickmcfarley@metrocast.net"
+  },
+  {
+    "name": "ccode",
+    "title": "Country Code",
+    "type": "string",
+    "value": "US"
+  },
+  {
+    "name": "pcode",
+    "title": "Zip Code",
+    "type": "string",
+    "value": "03894"
+  },
+  {
+    "name": "address",
+    "title": "Address",
+    "type": "string",
+    "value": "50 Lang Pond Rd"
+  },
+  {
+    "name": "message",
+    "title": "Message",
+    "type": "string",
+    "value": ""
+  },
+  {
+    "name": "public",
+    "title": "Make Signature Public",
+    "type": "bool",
+    "value": false
+  },
+  {
+    "name": "share",
+    "title": "Keep Updated",
+    "type": "bool",
+    "value": false
+  }]
 }
