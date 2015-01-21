@@ -17,7 +17,7 @@
     "name": "lname",
     "title": "Last Name",
     "type": "string",
-    "value": "Mcfarley"
+    "value": "McFarley"
   },
   {
     "name": "email",
@@ -57,7 +57,7 @@
   },
   {
     "name": "share",
-    "title": "Keep Updated",
+    "title": "Receive Updates On Topic (if possible)",
     "type": "bool",
     "value": false
   }]
