@@ -50,7 +50,7 @@
     "value": ""
   },
   {
-    "name": "public_",
+    "name": "public",
     "title": "Make Signature Public",
     "type": "bool",
     "value": false
@@ -60,5 +60,21 @@
     "title": "Receive Updates On Topic (if possible)",
     "type": "bool",
     "value": false
+  },
+  {
+    "name": "fill_and_sign",
+    "title": "Fill forms AND automatically sign?",
+    "type": "radio",
+    "value": "no",
+    "options": [
+      {
+        "value": "no",
+        "label": "Just Fill Forms"
+      },
+      {
+        "value": "yes",
+        "label": "Fill and Sign"
+      }
+    ]
   }]
 }

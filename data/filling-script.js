@@ -1,5 +1,4 @@
 // This script fills the fields of a petition if it finds them
-
 self.port.on("sign", function(fname, lname, email, ccode, address, pcode, message, public_, share){
 
 // Preference values
@@ -13,6 +12,20 @@ self.port.on("sign", function(fname, lname, email, ccode, address, pcode, messag
   var user_public = public_
   var user_share = share
   
+// Convert bools for checkboxes
+  if (user_public == true){
+	  user_public == "checked";
+  }
+  if (user_public == false){
+	  user_public == "unchecked";
+  }
+  if (user_share == true){
+	  user_share == "checked";
+  }
+  if (user_share == false){
+	  user_share == "unchecked";
+  }
+   
 // Common fields from petitions on websites
   var form_fname = document.getElementsByName("first_name")[0]
   var form_lname = document.getElementsByName("last_name")[0]
@@ -21,7 +34,7 @@ self.port.on("sign", function(fname, lname, email, ccode, address, pcode, messag
   var form_address = document.getElementsByName("address")[0]
   var form_pcode = document.getElementsByName("postal_code")[0]
   var form_message = document.getElementsByName("message")[0]
-  var form_public = document.getElementById("public_")
+  var form_public = document.getElementById("public")
   var form_share = document.getElementById("share_info")
   var form_FName = document.getElementsByName("First_Name")[0]
   var form_LName = document.getElementsByName("Last_Name")[0]
