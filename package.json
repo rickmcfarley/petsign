@@ -50,7 +50,7 @@
     "value": ""
   },
   {
-    "name": "public",
+    "name": "public_",
     "title": "Make Signature Public",
     "type": "bool",
     "value": false
