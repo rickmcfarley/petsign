@@ -2,6 +2,7 @@
 
 self.port.on("sign", function(fname, lname, email, ccode, address, pcode, message, public_, share){
 
+// Preference values
   var user_fname = fname
   var user_email = email
   var user_lname = lname
@@ -11,6 +12,8 @@ self.port.on("sign", function(fname, lname, email, ccode, address, pcode, messag
   var user_message = message
   var user_public = public_
   var user_share = share
+  
+// Common fields from change.org
   var form_fname = document.getElementsByName("first_name")[0]
   var form_lname = document.getElementsByName("last_name")[0]
   var form_email = document.getElementsByName("email")[0]
@@ -20,7 +23,8 @@ self.port.on("sign", function(fname, lname, email, ccode, address, pcode, messag
   var form_message = document.getElementsByName("message")[0]
   var form_public = document.getElementById("public_")
   var form_share = document.getElementById("share_info")
-  
+
+// Check for form fields and fill with preference data  
   if (form_fname != null) {
       form_fname.value = user_fname;
   }
