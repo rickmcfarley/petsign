@@ -13,7 +13,7 @@ self.port.on("sign", function(fname, lname, email, ccode, address, pcode, messag
   var user_public = public_
   var user_share = share
   
-// Common fields from change.org
+// Common fields from petitions on websites
   var form_fname = document.getElementsByName("first_name")[0]
   var form_lname = document.getElementsByName("last_name")[0]
   var form_email = document.getElementsByName("email")[0]
@@ -23,8 +23,24 @@ self.port.on("sign", function(fname, lname, email, ccode, address, pcode, messag
   var form_message = document.getElementsByName("message")[0]
   var form_public = document.getElementById("public_")
   var form_share = document.getElementById("share_info")
+  var form_FName = document.getElementsByName("First_Name")[0]
+  var form_LName = document.getElementsByName("Last_Name")[0]
+  var form_Email = document.getElementsByName("Email")[0]
+  var form_Zip = document.getElementsByName("Zip")[0]
 
-// Check for form fields and fill with preference data  
+// Check for form fields and fill with preference data
+  if (form_FName != null){
+    form_FName.value = user_fname;
+  }
+  if (form_LName != null){
+    form_LName.value = user_lname;
+  }
+  if (form_Email != null){
+    form_Email.value = user_email;
+  }
+  if (form_Zip != null){
+    form_Zip.value = user_pcode;
+  }
   if (form_fname != null) {
       form_fname.value = user_fname;
   }
