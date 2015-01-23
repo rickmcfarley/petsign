@@ -1,5 +1,5 @@
 // This script fills the fields of a petition if it finds them
-self.port.on("sign", function(fname, lname, email, ccode, address, pcode, message, public_, share){
+self.port.on("sign", function(fname, lname, email, ccode, address, pcode, message, public_, share, fill_and_sign){
 
 // Preference values
     var user_fname = fname
@@ -11,7 +11,8 @@ self.port.on("sign", function(fname, lname, email, ccode, address, pcode, messag
     var user_message = message
     var user_public = public_
     var user_share = share
-  
+    var user_fill_and_sign = fill_and_sign
+ 
 // Convert bools for checkboxes
     if (user_public == true){
         user_public == "checked";
@@ -40,6 +41,10 @@ self.port.on("sign", function(fname, lname, email, ccode, address, pcode, messag
     var form_LName = document.getElementsByName("Last_Name")[0]
     var form_Email = document.getElementsByName("Email")[0]
     var form_Zip = document.getElementsByName("Zip")[0]
+
+// Sumbit buttons to check for
+    var submit_ = document.getElementsByName("submit")[0]
+    var sign_button = document.getElementsByName("sign_button")[0]
 
 // Check for form fields and fill with preference data
     if (form_FName != null){
@@ -80,5 +85,15 @@ self.port.on("sign", function(fname, lname, email, ccode, address, pcode, messag
     }
     if (form_share != null) {
         form_share.checked = user_share;
+    }
+
+// Check to see if user wants petition signed or just forms filled
+    if (user_fill_and_sign == "yes") {
+        if (submit_ != null) {
+            submit_.click();
+        }
+        if (sign_button != null) {
+            sign_button.click();
+        }
     }
 });
