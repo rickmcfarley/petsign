@@ -1,5 +1,8 @@
 {
-  "_comment": "This file, part of the Petition Signer program, is copyrighted and released under the GNU General Public License, version 3 or later (see file LICENSE). Petition Signer carries no warranty (see LICENSE).",
+  
+  "_comment": "This file, part of the Petition Signer program, is copyrighted and released under the GNU ",
+  "comment_": "General Public License, version 3 or later (see file LICENSE). Petition Signer carries no warranty (see LICENSE)."
+  
   "name": "petsign",
   "title": "Petition Signer",
   "id": "jid1-J7pMuBlEKAOcQQ",
