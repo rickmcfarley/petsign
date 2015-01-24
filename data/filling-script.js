@@ -1,3 +1,7 @@
+// This file, part of the Petition Signer program, is copyrighted and released under the
+// GNU General Public License, version 3 or later (see file LICENSE).
+// Petition Signer carries no warranty (see LICENSE).
+
 // This script fills the fields of a petition if it finds them
 self.port.on("sign", function(fname, lname, email, ccode, address, pcode, message, public_, share, fill_and_sign){
 
@@ -41,10 +45,13 @@ self.port.on("sign", function(fname, lname, email, ccode, address, pcode, messag
     var form_LName = document.getElementsByName("Last_Name")[0]
     var form_Email = document.getElementsByName("Email")[0]
     var form_Zip = document.getElementsByName("Zip")[0]
+    var form_zcode = document.getElementsByName("zip_code")[0]
+    var form_signup = document.getElementsByName("sign_up")[0]
 
 // Sumbit buttons to check for
     var submit_ = document.getElementsByName("submit")[0]
     var sign_button = document.getElementsByName("sign_button")[0]
+    var op = document.getElementsByName("op")[0]
 
 // Check for form fields and fill with preference data
     if (form_FName != null){
@@ -77,6 +84,9 @@ self.port.on("sign", function(fname, lname, email, ccode, address, pcode, messag
     if (form_pcode != null) {
         form_pcode.value = user_pcode;
     }
+    if (form_zcode != null) {
+        form_zcode.value = user_pcode;
+    }
     if (form_message != null) {
         form_message.value = user_message;
     }
@@ -86,6 +96,9 @@ self.port.on("sign", function(fname, lname, email, ccode, address, pcode, messag
     if (form_share != null) {
         form_share.checked = user_share;
     }
+    if (form_signup != null) {
+        form_signup.checked = user_share;
+    }
 
 // Check to see if user wants petition signed or just forms filled
     if (user_fill_and_sign == "yes") {
@@ -94,6 +107,9 @@ self.port.on("sign", function(fname, lname, email, ccode, address, pcode, messag
         }
         if (sign_button != null) {
             sign_button.click();
+        }
+        if (op != null) {
+            op.click();
         }
     }
 });

@@ -1,11 +1,12 @@
 {
+  "_comment": "This file, part of the Petition Signer program, is copyrighted and released under the GNU General Public License, version 3 or later (see file LICENSE). Petition Signer carries no warranty (see LICENSE).",
   "name": "petsign",
   "title": "Petition Signer",
   "id": "jid1-J7pMuBlEKAOcQQ",
   "description": "A simple petition signer for change.org and similar petition sites",
   "author": "Rick McFarley",
   "license": "GPLv3",
-  "version": "1.0",
+  "version": "1.1",
 
   "preferences": [{
     "name": "fname",
